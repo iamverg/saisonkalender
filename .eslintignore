@@ -1,0 +1,11 @@
+
+dist/
+.prettierrc.js
+.eslintrc.json
+env.d.ts
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+node_modules/*

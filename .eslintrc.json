@@ -1,0 +1,94 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "import"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "semi": ["error", "always"],
+    "react/react-in-jsx-scope": ["off"],
+    "react/jsx-uses-react": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/no-unescaped-entities": ["off"],
+    "react/no-array-index-key": 0,
+    "react/prefer-stateless-function": 0,
+    "react/forbid-prop-types": 0,
+    "react/function-component-definition": 0,
+    "react/display-name": 1,
+    "react/require-default-props": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".mdx"]
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "import/no-cycle": "off",
+    "import/no-unresolved": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": [1, { "ignoreRestSiblings": true }],
+    "no-redeclare": "off",
+    "@typescript-eslint/no-redeclare": [
+      "warn",
+      {
+        "ignoreDeclarationMerge": true
+      }
+    ],
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto",
+        "tabWidth": 2,
+        "trailingComma": "all",
+        "useTabs": false
+      }
+    ]
+  }
+}
